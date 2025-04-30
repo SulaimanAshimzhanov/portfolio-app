@@ -1,10 +1,14 @@
-import eslintPluginReact from 'eslint-plugin-react';
-import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
-import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
-import parserTs from '@typescript-eslint/parser';
-import pluginTs from '@typescript-eslint/eslint-plugin';
+/** @type {import('eslint').Linter.Config} */
 
-export default [
+const parserTs = require('@typescript-eslint/parser');
+const pluginTs = require('@typescript-eslint/eslint-plugin');
+const pluginReact = require('eslint-plugin-react');
+const pluginReactHooks = require('eslint-plugin-react-hooks');
+const pluginJsxA11y = require('eslint-plugin-jsx-a11y');
+const pluginPrettier = require('eslint-plugin-prettier');
+const configPrettier = require('eslint-config-prettier');
+
+module.exports = [
   {
     files: ['**/*.{ts,tsx}'],
     ignores: ['dist/**', 'node_modules/**'],
@@ -19,14 +23,16 @@ export default [
       },
     },
     plugins: {
-      react: eslintPluginReact,
-      'react-hooks': eslintPluginReactHooks,
-      jsxA11y: eslintPluginJsxA11y,
+      react: pluginReact,
+      'react-hooks': pluginReactHooks,
+      jsxA11y: pluginJsxA11y,
       '@typescript-eslint': pluginTs,
+      prettier: pluginPrettier,
     },
     rules: {
-      'react/react-in-jsx-scope': 'off', // Не нужен с Vite
-      'react/prop-types': 'off', // Не нужен с TS
+      'prettier/prettier': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': ['warn'],
     },
     settings: {
@@ -34,5 +40,8 @@ export default [
         version: 'detect',
       },
     },
+  },
+  {
+    rules: configPrettier.rules,
   },
 ];
