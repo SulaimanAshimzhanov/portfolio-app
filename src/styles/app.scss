@@ -1,28 +1,40 @@
-
 body {
-    background-color: gray;
-    margin: 0;
-    padding: 0;
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
-ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
 }
 
 .container {
-    max-width: 100rem;
-    margin: auto;
+  max-width: 100rem;
+  margin: auto;
 }

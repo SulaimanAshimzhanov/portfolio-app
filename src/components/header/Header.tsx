@@ -11,19 +11,25 @@ const Header = () => {
 
           <nav className={cls.header__menu}>
             <ul>
-                <li>
-                    <Link to="">ShopApp</Link>
-                </li>
-                <li>
-                    <Link to="">TodoApp</Link>
-                </li>
-                <li>
-                    <Link to="">WeatherApp</Link>
-                </li>
+              <li>
+                <Link to="">ShopApp</Link>
+              </li>
+              <li>
+                <Link to="">TodoApp</Link>
+              </li>
+              <li>
+                <Link to="">WeatherApp</Link>
+              </li>
             </ul>
           </nav>
 
-          <button>Logout</button>
+          <button className={cls.header__logout}>Logout</button>
+
+          <button className={cls.header__burger}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </div>
