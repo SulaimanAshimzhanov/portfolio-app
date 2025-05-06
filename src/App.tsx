@@ -5,6 +5,7 @@ function App() {
   return (
     <div>
       <Components.Header />
+      <Components.Footer />
     </div>
   );
 }

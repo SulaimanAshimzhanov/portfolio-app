@@ -1,0 +1,10 @@
+.footer {
+  background-color: rgb(42, 70, 152);
+  padding: 1.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  &__content {
+    line-height: 1.5rem;
+  }
+}
